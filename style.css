@@ -1,4 +1,15 @@
 /* Global Styles */
+header {
+    background-color: #6A1B9A; /* Purple color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
