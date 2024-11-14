@@ -30,3 +30,9 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+function toggleContent(element) {
+    const section = element.parentElement; // Get the parent section element
+    section.classList.toggle("open"); // Toggle the "open" class
+}
+
