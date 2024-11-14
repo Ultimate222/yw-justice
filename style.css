@@ -84,6 +84,40 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+.collapsible-section {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.collapsible-title {
+    font-size: 1.5em;
+    color: #800080; /* Replace with your chosen color */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 1em;
+    transition: transform 0.3s;
+}
+
+.collapsible-content {
+    display: none; /* Hidden by default */
+    padding-top: 10px;
+    color: #333; /* Text color for the content */
+}
+
+.collapsible-section.open .collapsible-content {
+    display: block; /* Show content when section is open */
+}
+
+.collapsible-section.open .arrow {
+    transform: rotate(180deg); /* Flip the arrow when section is open */
+}
+
 /* Center the poster section */
 .posters {
     display: flex;
