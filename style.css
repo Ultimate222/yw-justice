@@ -101,7 +101,7 @@ main {
 
 .arrow {
     font-size: 1em;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .collapsible-content {
@@ -121,7 +121,7 @@ main {
 .collapsible-content {
     max-height: 0; /* Start with a height of 0 to hide the content */
     overflow: hidden; /* Hide any overflow */
-    transition: max-height 1.5s ease; /* Add smooth transition */
+    transition: max-height 2.0s ease; /* Add smooth transition */
     padding-top: 0;
 }
 
