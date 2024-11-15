@@ -35,4 +35,12 @@ function toggleContent(element) {
     const section = element.parentElement; // Get the parent section element
     section.classList.toggle("open"); // Toggle the "open" class
 }
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) { // Adjust scroll distance to trigger the shrink
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
 
