@@ -14,9 +14,9 @@ body {
     background-position: center;
     color: white;
     text-align: center;
-    height: 400px; /* Starting height */
+    height: 100px; /* Starting height */
     padding: 50px;
-    transition: height 0.3s ease; /* Smooth shrinking */
+    transition: height 0.5s ease; /* Smooth shrinking */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@ body {
 
 /* Shrinking effect for the header */
 #main-header.shrink {
-    height: 200px; /* Shrink height on scroll */
+    height: 50px; /* Shrink height on scroll */
     padding: 20px;
 }
 
