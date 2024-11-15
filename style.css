@@ -94,7 +94,7 @@ main {
 
 .collapsible-title {
     font-size: 1.5em;
-    color: #800080; /* Replace with your chosen color */
+    color: #800080; /* Set your chosen color */
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -103,33 +103,24 @@ main {
 
 .arrow {
     font-size: 1em;
-    transition: transform 0.5s;
+    transition: transform 0.5s; /* Rotate arrow smoothly */
 }
 
 .collapsible-content {
-    display: none; /* Hidden by default */
-    padding-top: 10px;
-    color: #333; /* Text color for the content */
+    max-height: 0; /* Start with content hidden */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.6s ease, opacity 0.6s ease; /* Smoothly reveal content */
+    opacity: 0;
 }
 
 .collapsible-section.open .collapsible-content {
-    display: block; /* Show content when section is open */
+    max-height: 200px; /* Adjust to fit content */
+    opacity: 1; /* Fade in content */
+    padding-top: 10px; /* Optional: adds spacing when open */
 }
 
 .collapsible-section.open .arrow {
-    transform: rotate(180deg); /* Flip the arrow when section is open */
-}
-
-.collapsible-content {
-    max-height: 0; /* Start with a height of 0 to hide the content */
-    overflow: hidden; /* Hide any overflow */
-    transition: max-height 2.0s ease; /* Add smooth transition */
-    padding-top: 0;
-}
-
-.collapsible-section.open .collapsible-content {
-    max-height: 200px; /* Set a max height high enough to show all content */
-    padding-top: 10px;
+    transform: rotate(180deg); /* Rotate arrow when section is open */
 }
 
 /* Center the poster section */
