@@ -7,43 +7,6 @@ body {
     background-color: #f8f8f8;
     overflow-x: hidden;
 }
-/* Main header styling with background image */
-#main-header {
-    background-image: url('path/to/your-image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    height: 100px; /* Starting height */
-    padding: 50px;
-    transition: height 0.5s ease; /* Smooth shrinking */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Shrinking effect for the header */
-#main-header.shrink {
-    height: 50px; /* Shrink height on scroll */
-    padding: 20px;
-}
-
-#main-header h1, #main-header p {
-    margin: 0;
-    padding: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for text */
-}
-
-/* Optional: Fade and shrink text when scrolling */
-#main-header.shrink h1 {
-    transform: scale(0.8);
-    opacity: 0.8;
-}
-
-#main-header.shrink p {
-    transform: scale(0.8);
-    opacity: 0.7;
-}
 
 .logo {
     width: 50px;
