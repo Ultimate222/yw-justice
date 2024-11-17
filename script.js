@@ -59,4 +59,11 @@ document.querySelectorAll('.collapsible').forEach(item => {
     });
 });
 
+function setLanguage(language) {
+    // Select elements and update their content
+    document.getElementById("header-title").textContent = translations[language].headerTitle;
+    document.getElementById("about-section").textContent = translations[language].about;
+    document.getElementById("contact-link").textContent = translations[language].contact;
+    document.getElementById("inspiration-link").textContent = translations[language].inspiration;
+}
 
