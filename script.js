@@ -45,4 +45,18 @@ window.addEventListener('scroll', function() {
     }
 });
 
+document.querySelectorAll('.collapsible').forEach(item => {
+    item.querySelector('.arrow').addEventListener('click', () => {
+        const content = item.querySelector('.collapsible-content');
+        content.classList.toggle('open');
+        
+        // Adjust height only if the content is open
+        if (content.classList.contains('open')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = "0";
+        }
+    });
+});
+
 
