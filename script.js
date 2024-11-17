@@ -67,3 +67,54 @@ function setLanguage(language) {
     document.getElementById("inspiration-link").textContent = translations[language].inspiration;
 }
 
+// Language Data
+const translations = {
+    en: {
+        "nav-home": "Home",
+        "nav-about": "About Us",
+        "nav-resources": "Resources",
+        "nav-inspirations": "Inspirations",
+        "nav-contact": "Contact Us",
+        "nav-help": "Get Help",
+        "about-ywj-title": "About YWJ",
+        "about-ywj-content": "Youth for Women’s Justice (YWJ) is a high school-driven initiative aimed at raising awareness..."
+    },
+    fj: {
+        "nav-home": "Vale",
+        "nav-about": "Meda Kila Na YWJ",
+        "nav-resources": "iVakarau",
+        "nav-inspirations": "Vakabauta",
+        "nav-contact": "Vakarau Ni Veitaratara",
+        "nav-help": "Kerea Na Veivuke",
+        "about-ywj-title": "Meda Kila Na YWJ",
+        "about-ywj-content": "Na YWJ e dua na cakacaka ni vuli ni koronivuli ka vakayacori me vukei ira na marama..."
+    },
+    hi: {
+        "nav-home": "होम",
+        "nav-about": "YWJ के बारे में",
+        "nav-resources": "संसाधन",
+        "nav-inspirations": "प्रेरणाएँ",
+        "nav-contact": "संपर्क करें",
+        "nav-help": "मदद लें",
+        "about-ywj-title": "YWJ के बारे में",
+        "about-ywj-content": "YWJ एक हाई स्कूल-ड्राइव पहल है जो महिलाओं के अधिकारों को बढ़ावा देने और..."
+    }
+};
+
+// Function to Change Language
+function changeLanguage(language) {
+    const elements = document.querySelectorAll("[data-key]");
+    elements.forEach(element => {
+        const key = element.getAttribute("data-key");
+        if (translations[language][key]) {
+            element.textContent = translations[language][key];
+        }
+    });
+}
+
+// Collapsible Section
+function toggleContent(element) {
+    const content = element.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
