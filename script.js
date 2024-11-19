@@ -26,7 +26,15 @@ function revealOnScroll() {
             section.classList.remove('show');
         }
     });
-    {
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+function toggleContent(element) {
+    const section = element.parentElement; // Get the parent section element
+    section.classList.toggle("open"); // Toggle the "open" class
+}
 // Add this JavaScript to script.js
 window.addEventListener('scroll', function() {
     const header = document.getElementById('main-header');
@@ -137,3 +145,4 @@ fj:
     "you-can-help-(get-involved)-content": "YWJ मानता है कि हर व्यक्ति महिलाओं के अधिकारों को समर्थन देने में भूमिका निभा सकता है। जागरूकता फैलाएं, स्वयंसेवा करें, दान करें और संसाधन साझा करें।"
     },
 };
+
