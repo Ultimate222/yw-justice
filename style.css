@@ -13,7 +13,7 @@ body {
     height: auto;
     margin-right: 15px;
 }
-/* Main header styling with background image */
+/* Main header styling with background image */ 
 #main-header {
     background-image: url('MB:/Untitled design.jpg'); /* Replace with your image path */
     background-size: cover;
