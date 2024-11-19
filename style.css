@@ -160,7 +160,7 @@ nav a:hover {
 
 /* When the section is open */
 .collapsible-section.open .collapsible-content {
-    max-height: 500px; /* Adjust max-height as needed */
+    max-height: 1000px; /* Adjust max-height as needed */
     opacity: 1; /* Make it visible */
     padding-top: 10px; /* Optional: add padding when open */
     overflow-y: auto; /* Enable scrolling when content is too large */
