@@ -144,3 +144,9 @@ function toggleContent(element) {
     }
 }
 
+// Collapsible Sections
+function toggleContent(element) {
+    const section = element.parentElement;
+    section.classList.toggle("active");
+}
+
