@@ -1,6 +1,6 @@
 // Language switching logic
 function changeLanguage(language) {
-    const elements = document.querySelectorAll('[data-key]');  // Select all elements with 'data-key'
+    // First, define the translations object
     const translations = {
         en: {
             'header-title': 'Youth For Women\'s Justice (YWJ)',
@@ -67,17 +67,16 @@ function changeLanguage(language) {
     // Select the translations for the selected language
     const selectedLanguage = translations[language];
 
-    // Loop through each element and update its content
+    // Clear content before setting new values
+    const elements = document.querySelectorAll('[data-key]');
     elements.forEach(element => {
-        const key = element.getAttribute('data-key');  // Get the 'data-key' attribute
-        if (selectedLanguage[key]) {  // If the translation exists for the key
-            element.innerText = selectedLanguage[key];  // Set the text of the element
+        const key = element.getAttribute('data-key');
+        // Ensure that we don't append or duplicate, just replace
+        if (selectedLanguage[key]) {
+            element.innerText = selectedLanguage[key];
+        } else {
+            element.innerText = ''; // Clear content if no translation exists
         }
-    });
-
-    // Clear any existing content to avoid duplicate text when switching languages
-    elements.forEach(element => {
-        element.innerText = selectedLanguage[element.getAttribute('data-key')];
     });
 }
 
