@@ -74,6 +74,11 @@ function changeLanguage(language) {
             element.innerText = selectedLanguage[key];  // Set the text of the element
         }
     });
+
+    // Clear any existing content to avoid duplicate text when switching languages
+    elements.forEach(element => {
+        element.innerText = selectedLanguage[element.getAttribute('data-key')];
+    });
 }
 
 // Collapsible content toggle
