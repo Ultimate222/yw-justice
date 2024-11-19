@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YWJ - Youth for Women's Justice</title>
+    <title>Youth For Women's Justice</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header id="main-header">
-        <h1 data-key="header-title">Youth For Women's Justice (YWJ)</h1>
-        <p data-key="header-subtitle">Empowering Voices, Protecting Rights</p>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1 data-key="header-title">Youth For Women's Justice (YWJ)</h1>
+            <p data-key="header-subtitle">Empowering Voices, Protecting Rights</p>
+            <div class="language-switch">
+                <button class="language-btn" data-lang="en">English</button>
+                <button class="language-btn" data-lang="fj">Fijian</button>
+                <button class="language-btn" data-lang="hi">Hindi</button>
+            </div>
+        </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
-        <a href="index.html" data-key="nav-home">Home</a>
-        <a href="about.html" data-key="nav-about">About Us</a>
-        <a href="resources.html" data-key="nav-resources">Resources</a>
-        <a href="inspirations.html" data-key="nav-inspirations">Inspirations</a>
-        <a href="contact.html" data-key="nav-contact">Contact Us</a>
-        <a href="get-help.html" data-key="nav-help">Get Help</a>
+        <ul>
+            <li><a href="#about" data-key="nav-about">About Us</a></li>
+            <li><a href="#why-fiji" data-key="nav-why-fiji">Why Fiji?</a></li>
+            <li><a href="#core-values" data-key="nav-core-values">Core Values</a></li>
+            <li><a href="#help" data-key="nav-help">How You Can Help</a></li>
+            <li><a href="#gallery" data-key="nav-gallery">Gallery</a></li>
+        </ul>
     </nav>
-
-    <!-- Language Selector -->
-    <div id="language-selector">
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('fj')">Fijian</button>
-        <button onclick="changeLanguage('hi')">Hindi</button>
-    </div>
 
     <!-- Main Content -->
     <main>
-        <!-- Collapsible Sections -->
-        <section class="collapsible-section">
-            <h2 class="collapsible-title" onclick="toggleContent(this)">
-                <span data-key="about-title">About YWJ</span>
-                <span class="arrow">▼</span>
-            </h2>
-            <div class="collapsible-content">
-                <p data-key="about-content">
-                    Youth for Women’s Justice (YWJ) is a high school-driven initiative aimed at raising awareness about women’s rights and advocating against violence and discrimination toward women and girls in Fiji.
-                    Founded by young leaders passionate about social justice, YWJ seeks to inform, empower, and inspire Fijian women and girls to stand up for their rights, recognize signs of abuse, and access the help they need.
-                </p>
-            </div>
+        <!-- About Section -->
+        <section id="about">
+            <h2 data-key="about-title">About YWJ</h2>
+            <p data-key="about-content">
+                <b>Youth for Women’s Justice (YWJ)</b> is a high school-driven initiative aimed at raising awareness about women’s rights and advocating against violence and discrimination toward women and girls in Fiji. Founded by young leaders passionate about social justice, YWJ seeks to inform, empower, and inspire Fijian women and girls to stand up for their rights, recognize signs of abuse, and access the help they need. By providing valuable resources, connections to local helplines, and real stories from women advocates, YWJ aspires to foster a supportive and informed community where women’s voices are heard and valued.
+            </p>
         </section>
 
+        <!-- Why Fiji Section -->
         <section class="collapsible-section">
             <h2 class="collapsible-title" onclick="toggleContent(this)">
                 <span data-key="why-fiji-title">Why Focus on Fiji?</span>
@@ -54,71 +50,56 @@
             </h2>
             <div class="collapsible-content">
                 <p data-key="why-fiji-content">
-                    While women’s rights are a global issue, certain regions face unique social and cultural challenges that hinder gender equality. In Fiji, many women and girls experience violence, harassment, and societal pressures 
-                    that keep them from recognizing their value and rights. Traditional norms often prevent open discussions about abuse, making it difficult for those affected to seek help or realize that their situation is not acceptable.
+                    While women’s rights are a global issue, certain regions face unique social and cultural challenges that hinder gender equality. In Fiji, many women and girls experience violence, harassment, and societal pressures that keep them from recognizing their value and rights. Traditional norms often prevent open discussions about abuse, making it difficult for those affected to seek help or realize that their situation is not acceptable. YWJ recognizes the importance of focusing on these specific cultural contexts and aims to provide resources tailored to the Fijian community’s unique needs, challenges, and language.
                 </p>
-                <p data-key="why-fiji-content">
-                    Additionally, the remoteness of certain Fijian communities can limit access to support networks, legal protections, and crisis services. YWJ wants to bridge this gap by creating a digital platform where women and girls across Fiji 
-                    can access information, find helplines, and connect with a supportive network that understands their background and struggles.
+                <p>
+                    Additionally, the remoteness of certain Fijian communities can limit access to support networks, legal protections, and crisis services. YWJ wants to bridge
                 </p>
-            </div>
-        </section>
-
-        <section class="collapsible-section">
-            <h2 class="collapsible-title" onclick="toggleContent(this)">
-                <span data-key="core-values-title">Core Values</span>
-                <span class="arrow">▼</span>
-            </h2>
-            <div class="collapsible-content">
-                <p data-key="core-values-content"><b>Empowerment:</b> Every woman deserves to know her worth and rights.</p>
-                <p data-key="core-values-content"><b>Awareness:</b> Education and awareness are crucial for social change.</p>
-                <p data-key="core-values-content"><b>Advocacy:</b> Standing up for women’s rights requires collective action.</p>
-                <p data-key="core-values-content"><b>Inclusivity:</b> YWJ is for all women and girls, regardless of age, background, or location.</p>
-                <p data-key="core-values-content"><b>Community Support:</b> Together, we are stronger.</p>
-            </div>
-        </section>
-
-        <section class="collapsible-section">
-            <h2 class="collapsible-title" onclick="toggleContent(this)">
-                <span data-key="purpose-title">Purpose</span>
-                <span class="arrow">▼</span>
-            </h2>
-            <div class="collapsible-content">
-                <p data-key="purpose-content">
-                    The purpose of this site is to educate and support women and girls in Fiji regarding their rights and provide resources to combat gender-based violence.
+                <p>
+                    Additionally, the remoteness of certain Fijian communities can limit access to support networks, legal protections, and crisis services. YWJ wants to bridge this gap by creating a digital platform where women and girls across Fiji can access information, find helplines, and connect with a supportive network that understands their background and struggles.
                 </p>
             </div>
         </section>
 
-        <section class="collapsible-section">
-            <h2 class="collapsible-title" onclick="toggleContent(this)">
-                <span data-key="you-can-help-title">You Can Help</span>
-                <span class="arrow">▼</span>
-            </h2>
-            <div class="collapsible-content">
-                <p data-key="you-can-help-content"><b>Spread Awareness:</b> Share our resources with friends and family.</p>
-                <p data-key="you-can-help-content"><b>Volunteer:</b> Connect with us to support campaigns or run events.</p>
-                <p data-key="you-can-help-content"><b>Donate or Fundraise:</b> Help raise funds or donations for our efforts.</p>
-                <p data-key="you-can-help-content"><b>Stay Informed:</b> Follow us online to keep updated on women’s rights in Fiji.</p>
-            </div>
+        <!-- Core Values Section -->
+        <section id="core-values">
+            <h2 data-key="core-values-title">Our Core Values</h2>
+            <ul>
+                <li data-key="core-value-empowerment"><b>Empowerment:</b> Strengthening women and girls to recognize their worth and voice.</li>
+                <li data-key="core-value-awareness"><b>Awareness:</b> Educating communities about women’s rights and social justice.</li>
+                <li data-key="core-value-advocacy"><b>Advocacy:</b> Pushing for systemic changes to reduce violence and discrimination.</li>
+                <li data-key="core-value-inclusivity"><b>Inclusivity:</b> Welcoming diverse perspectives to foster unity and collaboration.</li>
+                <li data-key="core-value-support"><b>Support:</b> Building safe spaces and networks for those in need.</li>
+            </ul>
+        </section>
+
+        <!-- Help Section -->
+        <section id="help">
+            <h2 data-key="help-title">How You Can Help</h2>
+            <p data-key="help-content">
+                You can contribute to our mission by volunteering your time, donating resources, or spreading awareness about women’s rights and gender equality. We are always looking for passionate individuals and organizations to join us in our mission. Here’s how you can help:
+            </p>
+            <ul>
+                <li data-key="help-volunteer"><b>Volunteer:</b> Participate in events, workshops, and outreach programs.</li>
+                <li data-key="help-donate"><b>Donate:</b> Contribute funds or supplies to support women in need.</li>
+                <li data-key="help-advocate"><b>Advocate:</b> Share our mission and resources on social media or within your community.</li>
+            </ul>
         </section>
 
         <!-- Gallery Section -->
-        <section class="section posters">
-            <h2>Gallery</h2>
-            <div class="poster">Poster 1</div>
-            <div class="poster">Poster 2</div>
-            <div class="poster">Poster 3</div>
-            <div class="poster">Poster 4</div>
+        <section id="gallery">
+            <h2 data-key="gallery-title">Gallery</h2>
+            <div class="gallery-container">
+                <img src="image1.jpg" alt="YWJ Workshop" data-key="gallery-img-1">
+                <img src="image2.jpg" alt="YWJ Event" data-key="gallery-img-2">
+                <img src="image3.jpg" alt="Advocacy Campaign" data-key="gallery-img-3">
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>YWJ © 2024 | Follow us on:
-            <span class="social-media">Facebook</span>
-            <span class="social-media">Twitter</span>
-            <span class="social-media">Instagram</span>
-        </p>
+        <p data-key="footer-content">© 2024 Youth for Women’s Justice. All rights reserved.</p>
     </footer>
 </body>
 </html>
