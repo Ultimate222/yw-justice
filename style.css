@@ -131,37 +131,43 @@ nav a:hover {
 
 /* Collapsible Section */
 .collapsible-section {
-    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .collapsible-title {
+    font-size: 1.5em;
+    color: #800080; /* Set your chosen color */
     cursor: pointer;
-    font-weight: bold;
-}
-
-.collapsible-content {
-    display: none;
-    padding: 10px;
-    margin-top: 5px;
-    border-left: 3px solid #4CAF50;
-    background-color: #f9f9f9;
-    max-height: 200px; /* Limit the height when collapsed */
-    overflow-y: auto; /* Allow scrolling if the content overflows */
-    transition: max-height 0.3s ease-out; /* Smooth transition for height change */
-}
-
-.collapsible-section.open .collapsible-content {
-    display: block;
-    max-height: 5000px; /* No limit on height when expanded */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .arrow {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
+    font-size: 1em;
+    transition: transform 0.5s; /* Rotate arrow smoothly */
+}
+
+/* Collapsible content styling */
+.collapsible-content {
+    max-height: 0; /* Start with hidden content */
+    overflow-y: hidden; /* Hide the overflow initially */
+    transition: max-height 0.6s ease, opacity 0.6s ease; /* Smoothly reveal content */
+    opacity: 0;
+    padding-top: 10px; /* Optional: adds spacing when open */
+}
+
+/* When the section is open */
+.collapsible-section.open .collapsible-content {
+    max-height: 500px; /* Adjust max-height as needed */
+    opacity: 1; /* Make it visible */
+    padding-top: 10px; /* Optional: add padding when open */
+    overflow-y: auto; /* Enable scrolling when content is too large */
 }
 
 .collapsible-section.open .arrow {
-    transform: rotate(180deg); /* Rotate the arrow when the section is open */
+    transform: rotate(180deg); /* Rotate arrow when section is open */
 }
 
 
