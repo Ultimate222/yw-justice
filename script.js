@@ -27,3 +27,37 @@ function translatePage(languageCode) {
 document.getElementById('english').addEventListener('click', () => translatePage('en'));
 document.getElementById('fijian').addEventListener('click', () => translatePage('fj'));
 document.getElementById('hindi').addEventListener('click', () => translatePage('hi'));
+
+// Handle Collapsible Sections
+function toggleContent(element) {
+    const section = element.parentElement;
+    section.classList.toggle("open");
+}
+
+// Language Buttons to Simulate Page Refresh
+document.getElementById("english").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+document.getElementById("fijian").addEventListener("click", () => {
+    window.location.href = "index_fj.html";
+});
+
+document.getElementById("hindi").addEventListener("click", () => {
+    window.location.href = "index_hi.html";
+});
+
+// Smooth Scroll Fix for Laggy Scrolling
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            if (this.hash !== "") {
+                e.preventDefault();
+                const target = document.querySelector(this.hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
+    });
+});
