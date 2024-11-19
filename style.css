@@ -216,6 +216,64 @@ main {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Gallery Section */
+.section.posters {
+    margin: 40px auto;
+    width: 90%; /* Makes the gallery section responsive */
+    text-align: center;
+}
+
+.posters h2 {
+    font-size: 2em;
+    color: #6A1B9A;
+    margin-bottom: 20px;
+}
+
+/* Flexbox layout for the posters */
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for each individual poster */
+.poster {
+    width: calc(25% - 20px); /* 4 posters in a row with space between them */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 250px; /* Limit the height of the images to maintain proportion */
+}
+
+.poster p {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #6A1B9A;
+}
+
+/* Ensure text is centered and readable */
+@media (max-width: 768px) {
+    .poster {
+        width: calc(50% - 20px); /* 2 posters in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .poster {
+        width: 100%; /* 1 poster per row on very small screens */
+    }
+}
+
+
 /* Footer Styles */
 footer {
     text-align: center;
