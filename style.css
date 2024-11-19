@@ -106,7 +106,7 @@ nav a:hover {
 
 .arrow {
     font-size: 1em;
-    transition: transform 1.0s; /* Rotate arrow smoothly */
+    transition: transform 0.5s; /* Rotate arrow smoothly */
 }
 
 .collapsible-content {
@@ -146,14 +146,14 @@ nav a:hover {
 
 .arrow {
     font-size: 1em;
-    transition: transform 1.0s; /* Rotate arrow smoothly */
+    transition: transform 0.5s; /* Rotate arrow smoothly */
 }
 
 /* Collapsible content styling */
 .collapsible-content {
     max-height: 0; /* Start with hidden content */
     overflow-y: hidden; /* Hide the overflow initially */
-    transition: max-height 1.5s ease, opacity 1.0s ease; /* Smoothly reveal content */
+    transition: max-height 1.0s ease, opacity 0.6s ease; /* Smoothly reveal content */
     opacity: 0;
     padding-top: 10px; /* Optional: adds spacing when open */
 }
