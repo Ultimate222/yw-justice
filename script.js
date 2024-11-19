@@ -80,7 +80,7 @@ const translations = {
         "you-can-help-(get-involved)-title": "You Can Help (Get Involved)",
         "you-can-help-(get-involved)-content": "At YWJ, we believe everyone has a role in supporting and advancing women’s rights. Here are some ways you can get involved: Spread Awareness: Share our resources with friends, family, and colleagues to help more women understand their rights. Volunteer Connect with us to see how you can support our campaigns, assist with content creation, or help run local events. Donate or Fundraise: Although YWJ is a student-led initiative, we are open to ideas on how to raise funds or donations that will support our efforts in Fiji. Stay Informed: Regularly check our website and follow us on social media to stay updated on women’s rights issues in Fiji and learn about upcoming events or new resources.",
     },
-    fj: {
+    fj: 
        {
     "header-title": "Youth For Women's Justice (YWJ)",
     "header-subtitle": "Vakarau Dodonu, Taqomaka na Dodonu",
@@ -100,8 +100,6 @@ const translations = {
     "purpose-content": "Na iNaki ni mataveilawa oqo me vukei ira na marama kei na goneyalewa e Viti ena nodra kila na nodra dodonu, ka vakarautaka na veitokoni me tarova na itovo vakaloloma.",
     "you-can-help-(get-involved)-title": "Tiko na Nomu iTavi",
     "you-can-help-(get-involved)-content": "Keitou vakabauta ni tiko na nodra itavi na lewenivanua ena kena vakatorocaketaki na dodonu ni marama. Wasea na kila vei ira na wekamu, veitokoni ena ivakarau ni kena vakayacori na cakacaka ka solia na nomu veitokoni ena kena vakasakiti."
-}
-
     },
     hi: {
         "header-title": "युवा महिलाओं के लिए न्याय", 
@@ -122,8 +120,6 @@ const translations = {
     "purpose-content": "इस साइट का उद्देश्य फिजी में महिलाओं और लड़कियों को उनके अधिकारों के प्रति शिक्षित करना और लिंग आधारित हिंसा का मुकाबला करने के लिए संसाधन प्रदान करना है।",
     "you-can-help-(get-involved)-title": "आप सहायता कर सकते हैं",
     "you-can-help-(get-involved)-content": "YWJ मानता है कि हर व्यक्ति महिलाओं के अधिकारों को समर्थन देने में भूमिका निभा सकता है। जागरूकता फैलाएं, स्वयंसेवा करें, दान करें और संसाधन साझा करें।"
-}
-
     }
 };
 
