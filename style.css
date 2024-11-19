@@ -1,167 +1,78 @@
-/* Basic Styles */
 body {
-    font-family: 'Playfair Display', serif;
-    color: #333;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
-/* Header Styles */
 header {
-    background-image: url('header-image.jpg'); /* Replace with your actual header image */
-    background-size: cover;
-    background-position: center;
+    background-color: #f5a623;
     color: white;
     text-align: center;
-    height: 400px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: height 0.3s ease-in-out;
+    padding: 20px;
 }
 
-header h1 {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 0;
     margin: 0;
-    font-size: 2.5em;
 }
 
-header p {
-    font-size: 1.2em;
-    margin: 10px 0 0;
+nav ul li {
+    margin: 0 15px;
 }
 
-header.shrink {
-    height: 200px;
-}
-
-header.shrink h1, header.shrink p {
-    transform: scale(0.9);
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #6200ea;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
 }
 
-nav a:hover {
-    background-color: #3700b3;
+main {
+    padding: 20px;
 }
 
-/* Language Selector */
-#language-selector {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-}
-
-#language-selector button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #bb86fc;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-#language-selector button:hover {
-    background-color: #6200ea;
-}
-
-/* Collapsible Sections */
 .collapsible-section {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    margin: 20px 0;
 }
 
 .collapsible-title {
-    font-size: 1.5em;
-    color: #6200ea;
     cursor: pointer;
+    background-color: #f5a623;
+    color: white;
+    padding: 10px;
+    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.arrow {
-    transition: transform 0.3s ease;
-}
-
 .collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
-    padding: 0 10px;
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
-.collapsible-section.open .collapsible-content {
-    max-height: 1000px; /* High enough to handle larger content */
-    opacity: 1;
-}
-
-.collapsible-section.open .arrow {
-    transform: rotate(180deg);
-}
-
-/* Posters Section */
-.posters {
+.gallery-container {
     display: flex;
+    gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
 
-.poster {
-    background-color: #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    width: 200px; /* Adjust size for better visuals */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.gallery-container img {
+    width: 30%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
 }
 
-.poster:hover {
-    background-color: #d1c4e9;
-    transform: scale(1.05);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Footer */
 footer {
-    background-color: #6200ea;
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-}
-
-footer .social-media {
-    margin: 0 10px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-footer .social-media:hover {
-    color: #bb86fc;
+    padding: 10px 0;
 }
