@@ -1,108 +1,85 @@
-// Translations Object
+// Object containing translations for English, Fijian, and Hindi
 const translations = {
     en: {
-        "header-title": "Youth For Women's Justice (YWJ)",
+        "header-title": "Youth for Women’s Justice (YWJ)",
         "header-subtitle": "Empowering Voices, Protecting Rights",
-        "nav-home": "Home",
-        "nav-about": "About Us",
-        "nav-resources": "Resources",
-        "nav-inspirations": "Inspirations",
-        "nav-contact": "Contact Us",
-        "nav-help": "Get Help",
+        "home": "Home",
+        "about": "About Us",
+        "resources": "Resources",
+        "inspirations": "Inspirations",
+        "contact": "Contact Us",
+        "help": "Get Help",
         "about-title": "About YWJ",
-        "about-content": "Youth for Women’s Justice (YWJ) is a high school-driven initiative aimed at raising awareness about women’s rights and advocating against violence and discrimination toward women and girls in Fiji.",
+        "about-content": `<b>Youth for Women’s Justice (YWJ)</b> is a high school-driven initiative aimed at raising awareness about women’s rights and advocating against violence and discrimination toward women and girls in Fiji. Founded by young leaders passionate about social justice, YWJ seeks to inform, empower, and inspire Fijian women and girls to stand up for their rights, recognize signs of abuse, and access the help they need. By providing valuable resources, connections to local helplines, and real stories from women advocates, YWJ aspires to foster a supportive and informed community where women’s voices are heard and valued.`,
         "why-fiji-title": "Why Focus on Fiji?",
-        "why-fiji-content": "While women’s rights are a global issue, Fiji faces unique challenges such as societal pressures, harassment, and limited access to resources for women and girls. YWJ aims to bridge these gaps.",
+        "why-fiji-content": `While women’s rights are a global issue, certain regions face unique social and cultural challenges that hinder gender equality. In Fiji, many women and girls experience violence, harassment, and societal pressures that keep them from recognizing their value and rights. Traditional norms often prevent open discussions about abuse, making it difficult for those affected to seek help or realize that their situation is not acceptable. YWJ recognizes the importance of focusing on these specific cultural contexts and aims to provide resources tailored to the Fijian community’s unique needs, challenges, and language.`,
         "core-values-title": "Core Values",
-        "core-values-content": "Empowerment, Awareness, Advocacy, Inclusivity, Community Support",
-        "purpose-title": "Purpose",
-        "purpose-content": "The purpose of this site is to educate and support women in Fiji about their rights and combat gender-based violence.",
-        "you-can-help-title": "You Can Help",
-        "you-can-help-content": "Spread Awareness, Volunteer, Donate or Fundraise, Stay Informed"
+        "core-values-content": `<b>Empowerment:</b> We believe that every woman and girl deserves to know her worth and rights.<br>
+            <b>Awareness:</b> Education and awareness are crucial for social change.<br>
+            <b>Advocacy:</b> Standing up for women’s rights requires collective action.`,
+        "gallery-title": "Gallery",
+        "footer": "YWJ © 2024 | Follow us on: Facebook Twitter Instagram"
     },
     fj: {
-        "header-title": "Vakarautaki me Baleti Ira na Marama (YWJ)",
-        "header-subtitle": "Vakaukauwataki Na Domodra, Taqomaka Na Dodonu",
-        "nav-home": "Vale",
-        "nav-about": "Me Baleti Keda",
-        "nav-resources": "iYau Me Vukei Keda",
-        "nav-inspirations": "Veika Vakauqeti",
-        "nav-contact": "Veitaratara",
-        "nav-help": "Kerea na Veivuke",
-        "about-title": "Me Baleti YWJ",
-        "about-content": "Youth for Women’s Justice (YWJ) e dua na cakacaka vakakoronivuli me vakadoudouya na marama kei na goneyalewa e Viti me kila na nodra yaga kei na nodra dodonu.",
-        "why-fiji-title": "Na Vuna Me Vakarau Kina E Viti?",
-        "why-fiji-content": "Na Viti e dau sotava na bolebole e so me vaka na nodra tabaki vakailavo na marama kei na nodra sega ni kila vinaka na ivakarau me taqomaki kina nodra bula.",
-        "core-values-title": "Yavu ni YWJ",
-        "core-values-content": "Vakadoudouya, Kila Na iTavi, Veivakaturi, Veidabui, Veitokoni",
-        "purpose-title": "iNaki",
-        "purpose-content": "Na inaki ni vanua oqo me vukea na marama me ra kila na nodra dodonu kei na tarovi na itovo vakaloloma.",
-        "you-can-help-title": "Vakaitavi",
-        "you-can-help-content": "Wasea Na iTukutuku, Veivuke Ena Cakacaka Vakaitavi, Soli Yaloka Se iLavo, iTukutuku Yaga"
+        "header-title": "Matavakawai Ni Lewe Ni Matanitu o Teitei (YWJ)",
+        "header-subtitle": "Vakadinadina Na Domoni, Taqomaka na Dodonu",
+        "home": "Vale",
+        "about": "Mabula Kei Keda",
+        "resources": "Veivakaukauwataki",
+        "inspirations": "Vakurabuitaki",
+        "contact": "Veitaratara",
+        "help": "Kerea Na Veivuke",
+        "about-title": "Mabula Kei YWJ",
+        "about-content": `<b>Matavakawai Ni Lewe Ni Matanitu o Teitei (YWJ)</b> e dua na cakacaka sa vakayacori mai na koronivuli e na veiqaravi me baleta na vakadinadina kei na dodonu ni marama kei na goneyalewa e na Viti. Na noda inaki sai koya me vakavinakataka, vakaduri, kei na vakalewa na bula ni marama kei na goneyalewa Fijian.`,
+        "why-fiji-title": "Na Vuna Me Cakacaka Vakalevu Kina ena Viti?",
+        "why-fiji-content": `Na dodonu ni marama e dua na isau ni vuravura taucoko, ia e so na vanua e na Viti e rawa ni tara vakalevu na leqa vakavakaduika kei na bula veiyacovi. Na veiqaravi e YWJ e sa na veitauri vakatulewa ena vakatauca na yavu ni veivakaukauwataki kei na ivakarau me yaga ki na nodrau bula na marama kei na goneyalewa e na Viti.`,
+        "core-values-title": "Na Yavu Levu ni YWJ",
+        "core-values-content": `<b>Veivakaukauwataki:</b> Me kila na marama kei na goneyalewa na nodra yavu dodonu.<br>
+            <b>Vakadinadina:</b> Me vakaraitaki na ka dina e na nodra vanua kei na itikotiko.<br>
+            <b>Vakadeitaki:</b> Na cakacaka vata e na taqomaka na dodonu ni marama.`,
+        "gallery-title": "Galala Ni YWJ",
+        "footer": "YWJ © 2024 | Muri keda ena: Facebook Twitter Instagram"
     },
     hi: {
-        "header-title": "महिलाओं के लिए न्याय (YWJ)",
-        "header-subtitle": "आवाज़ को सशक्त करें, अधिकारों की रक्षा करें",
-        "nav-home": "होम",
-        "nav-about": "हमारे बारे में",
-        "nav-resources": "संसाधन",
-        "nav-inspirations": "प्रेरणाएँ",
-        "nav-contact": "संपर्क करें",
-        "nav-help": "मदद प्राप्त करें",
+        "header-title": "महिला न्याय के लिए युवा (YWJ)",
+        "header-subtitle": "आवाज़ें सशक्त करें, अधिकारों की रक्षा करें",
+        "home": "होम",
+        "about": "हमारे बारे में",
+        "resources": "संसाधन",
+        "inspirations": "प्रेरणाएँ",
+        "contact": "संपर्क करें",
+        "help": "मदद पाएं",
         "about-title": "YWJ के बारे में",
-        "about-content": "युवा महिलाओं के न्याय (YWJ) एक स्कूल-संचालित पहल है जो महिलाओं के अधिकारों के प्रति जागरूकता बढ़ाने और उनके खिलाफ होने वाली हिंसा को रोकने के लिए काम करता है।",
-        "why-fiji-title": "फिजी पर ध्यान क्यों दें?",
-        "why-fiji-content": "फिजी में महिलाओं और लड़कियों को अद्वितीय चुनौतियों का सामना करना पड़ता है, जैसे सामाजिक दबाव, उत्पीड़न और संसाधनों की कमी। YWJ इन चुनौतियों से निपटने का प्रयास करता है।",
+        "about-content": `<b>महिला न्याय के लिए युवा (YWJ)</b> महिलाओं और लड़कियों के अधिकारों के बारे में जागरूकता बढ़ाने और उनके खिलाफ हिंसा और भेदभाव के खिलाफ आवाज उठाने के लिए एक स्कूल-चालित पहल है।`,
+        "why-fiji-title": "फिजी पर क्यों ध्यान दें?",
+        "why-fiji-content": `जबकि महिलाओं के अधिकार वैश्विक मुद्दे हैं, कुछ क्षेत्रों में सामाजिक और सांस्कृतिक चुनौतियों का सामना करना पड़ता है।`,
         "core-values-title": "मुख्य मूल्य",
-        "core-values-content": "सशक्तिकरण, जागरूकता, वकालत, समावेशिता, सामुदायिक समर्थन",
-        "purpose-title": "उद्देश्य",
-        "purpose-content": "इस साइट का उद्देश्य महिलाओं को उनके अधिकारों के बारे में शिक्षित करना और फिजी में लिंग आधारित हिंसा का मुकाबला करना है।",
-        "you-can-help-title": "आप मदद कर सकते हैं",
-        "you-can-help-content": "जागरूकता फैलाएँ, स्वयंसेवा करें, दान करें या धन जुटाएँ, अपडेट रहें"
+        "core-values-content": `<b>सशक्तिकरण:</b> हर महिला और लड़की को अपने अधिकारों के बारे में जानने का अधिकार है।<br>
+            <b>जागरूकता:</b> सामाजिक परिवर्तन के लिए शिक्षा आवश्यक है।<br>
+            <b>संगठन:</b> सामूहिक कार्रवाई अधिकारों की रक्षा करती है।`,
+        "gallery-title": "गैलरी",
+        "footer": "YWJ © 2024 | हमें फॉलो करें: Facebook Twitter Instagram"
     }
 };
 
-// Change Language Function
+// Function to change language dynamically
 function changeLanguage(language) {
     const elements = document.querySelectorAll("[data-key]");
-    elements.forEach((element) => {
+    elements.forEach(element => {
         const key = element.getAttribute("data-key");
-        if (translations[language][key]) {
-            element.textContent = translations[language][key];
+        if (translations[language] && translations[language][key]) {
+            element.innerHTML = translations[language][key];
         }
     });
 }
 
-// Collapsible Toggle Function
-function toggleContent(element) {
-    const section = element.parentElement;
-    section.classList.toggle("open");
-}
-
-// Shrink Header on Scroll
-window.addEventListener("scroll", () => {
-    const header = document.getElementById("main-header");
-    if (window.scrollY > 50) {
-        header.classList.add("shrink");
-    } else {
-        header.classList.remove("shrink");
-    }
+// Event listeners for language buttons
+document.querySelectorAll(".language-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const language = button.getAttribute("data-lang");
+        changeLanguage(language);
+    });
 });
 
-// Scroll Reveal Animation
-function revealOnScroll() {
-    const sections = document.querySelectorAll(".collapsible-section, .posters");
-    const triggerHeight = window.innerHeight * 0.8;
-
-    sections.forEach((section) => {
-        const top = section.getBoundingClientRect().top;
-        if (top < triggerHeight) {
-            section.classList.add("show");
-        } else {
-            section.classList.remove("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("DOMContentLoaded", revealOnScroll);
+// Default language
+changeLanguage("en");
