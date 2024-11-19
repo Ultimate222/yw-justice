@@ -232,3 +232,13 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Example CSS animation for gallery posters */
+.poster {
+    transition: transform 0.3s ease;
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
