@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YWJ - Matavakawai Ni Lewe Ni Matanitu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -25,69 +26,93 @@
 
     <!-- Main Content -->
     <main>
-        <section id="about-ywj">
-            <h2>Mabula Kei YWJ</h2>
-            <p>
-                <b>Matavakawai Ni Lewe Ni Matanitu (YWJ)</b> e dua na cakacaka sa vakayacori ena koronivuli me vakadodonutaka 
-                na nodra dodonu na marama kei na goneyalewa e Viti. Na YWJ e sa tuberi tiko ena loma ni veituberi ni veivakadonui 
-                vakamatatamata, me vakauqeti ira na marama me ra kila na nodra dodonu kei na ivakarau me ratou na vakaukauwataki 
-                kina. Ena loma ni YWJ, e levu na ivakarau e vakarautaki me baleta na veivakavinakataki, itukutuku kei na ivakadinadina 
-                me baleti ira na marama era sa mai bula vata kei na leqa vakaveitalia, ka vakadeitaka e dua na vuravura e kena domoni 
-                tiko na marama kei na nodra veika era sa gadreva.
-            </p>
+        <!-- About YWJ Section -->
+        <section class="collapsible-section">
+            <h2 class="collapsible-title" onclick="toggleContent(this)">
+                Mabula Kei YWJ <span class="arrow">▼</span>
+            </h2>
+            <div class="collapsible-content">
+                <p>
+                    <b>Matavakawai Ni Lewe Ni Matanitu (YWJ)</b> e dua na cakacaka sa vakayacori ena koronivuli me vakadodonutaka 
+                    na nodra dodonu na marama kei na goneyalewa e Viti. Na YWJ e sa tuberi tiko ena loma ni veituberi ni veivakadonui 
+                    vakamatatamata, me vakauqeti ira na marama me ra kila na nodra dodonu kei na ivakarau me ratou na vakaukauwataki 
+                    kina. Ena loma ni YWJ, e levu na ivakarau e vakarautaki me baleta na veivakavinakataki, itukutuku kei na ivakadinadina 
+                    me baleti ira na marama era sa mai bula vata kei na leqa vakaveitalia, ka vakadeitaka e dua na vuravura e kena domoni 
+                    tiko na marama kei na nodra veika era sa gadreva.
+                </p>
+            </div>
         </section>
+        <hr class="divider">
 
-        <section id="why-fiji">
-            <h2>Na Vuna Me Cakacaka Vakalevu Kina ena Viti?</h2>
-            <p>
-                E vuqa sara na leqa e vakilai tiko ena nodra bula na marama e Viti ka gadrevi me ra vakatulewataki ena yavu ni 
-                veivakadeitaki vakaitikotiko. Na veika vakavanua kei na veivakarautaki sa vaka me sa cakitaki ira na marama 
-                mai na nodra kila na nodra ivakarau vakayago kei na yavu ni veivuke ena gauna dredre. Na nodra bula na marama 
-                kei na goneyalewa ena veiyasa taucoko e Viti sa gadreva na veivakabibitaki me ra kila na yavu ni nodra dodonu kei 
-                na veivakaukauwataki vakadodonu.
-            </p>
-            <p>
-                E sa vakayacori na YWJ me baleta na nodra vakavulici na marama kei na nodra vakaraitaki ena sala me 
-                vakarautaki kina e dua na itikotiko e levu sara na veivuke kei na kena vakarautaki na ivakasala me baleti 
-                ira na marama ena nodra dodonu vakayago, vakamatavuvale kei na yavu ni nodra bula vakayago kei vakavakavulewa.
-            </p>
+        <!-- Why Focus on Fiji Section -->
+        <section class="collapsible-section">
+            <h2 class="collapsible-title" onclick="toggleContent(this)">
+                Na Vuna Me Cakacaka Vakalevu Kina ena Viti? <span class="arrow">▼</span>
+            </h2>
+            <div class="collapsible-content">
+                <p>
+                    E vuqa sara na leqa e vakilai tiko ena nodra bula na marama e Viti ka gadrevi me ra vakatulewataki ena yavu ni 
+                    veivakadeitaki vakaitikotiko. Na veika vakavanua kei na veivakarautaki sa vaka me sa cakitaki ira na marama 
+                    mai na nodra kila na nodra ivakarau vakayago kei na yavu ni veivuke ena gauna dredre.
+                </p>
+                <p>
+                    Na nodra bula na marama kei na goneyalewa ena veiyasa taucoko e Viti sa gadreva na veivakabibitaki me ra kila 
+                    na yavu ni nodra dodonu kei na veivakaukauwataki vakadodonu. E sa vakayacori na YWJ me baleta na nodra vakavulici 
+                    na marama kei na nodra vakaraitaki ena sala me vakarautaki kina e dua na itikotiko e levu sara na veivuke kei na 
+                    kena vakarautaki na ivakasala me baleti ira na marama ena nodra dodonu vakayago, vakamatavuvale kei na yavu ni nodra 
+                    bula vakayago kei vakavakavulewa.
+                </p>
+            </div>
         </section>
+        <hr class="divider">
 
-        <section id="core-values">
-            <h2>Na Yavu Levu ni YWJ</h2>
-            <ul>
-                <li><b>Veivakaukauwataki:</b> Na YWJ e gadreva me ra kila na marama kei na goneyalewa na nodra yavu dodonu kei 
-                na nodra itavi ena vakabauta na nodra bula kei na nodra cakacaka vakaitavi.</li>
-                <li><b>Vakadinadina:</b> Na YWJ e sa gadreva me vakarautaki e levu na itukutuku me baleti ira na marama kei 
-                na nodra dodonu, ka me ra kila kina na nodra yavu kei na ivakarau dodonu ena nodra itikotiko kei na ituvaki era 
-                sotava ena nodra bula.</li>
-                <li><b>Vakadeitaki:</b> E sa vakadeitaka na YWJ na gadreva me vakatautaki na yavu ni veivakarautaki me ra vukei 
-                kina na marama kei ira na goneyalewa ena kena vakalailaitaki na ituvaki vakadomobula.</li>
-                <li><b>Vakarorogo:</b> Na YWJ e sa vakaraitaki na kena gadrevi me vakarautaki e dua na itikotiko e vakarorogo 
-                tiko ki na itukutuku kei na ituvaki e ra sotava na marama ena gauna oqo.</li>
-                <li><b>Veivuke:</b> Na veivuke kei na nodra veitokoni vakaitikotiko ena yavu ni vakadeitaki na nodra dodonu 
-                na marama ena noda vanua kei na vuravura raraba.</li>
-            </ul>
+        <!-- Core Values Section -->
+        <section class="collapsible-section">
+            <h2 class="collapsible-title" onclick="toggleContent(this)">
+                Na Yavu Levu ni YWJ <span class="arrow">▼</span>
+            </h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li><b>Veivakaukauwataki:</b> Na YWJ e gadreva me ra kila na marama kei na goneyalewa na nodra yavu dodonu kei 
+                    na nodra itavi ena vakabauta na nodra bula kei na nodra cakacaka vakaitavi.</li>
+                    <li><b>Vakadinadina:</b> Na YWJ e sa gadreva me vakarautaki e levu na itukutuku me baleti ira na marama kei 
+                    na nodra dodonu, ka me ra kila kina na nodra yavu kei na ivakarau dodonu ena nodra itikotiko kei na ituvaki era 
+                    sotava ena nodra bula.</li>
+                    <li><b>Vakadeitaki:</b> E sa vakadeitaka na YWJ na gadreva me vakatautaki na yavu ni veivakarautaki me ra vukei 
+                    kina na marama kei ira na goneyalewa ena kena vakalailaitaki na ituvaki vakadomobula.</li>
+                </ul>
+            </div>
         </section>
+        <hr class="divider">
 
-        <section id="purpose">
-            <h2>Noda inaki</h2>
-            <p>
-                Na inaki levu ni YWJ sai koya me vakavulici ira na marama kei na goneyalewa ena nodra kila na nodra yavu dodonu 
-                kei na nodra vakacegu ena nodra bula vakaitikotiko. E sa vakarautaki e levu na itukutuku kei na veivakarautaki 
-                me ra marautaka kina na nodra bula ena itikotiko kei na gauna dredre.
-            </p>
+        <!-- Purpose Section -->
+        <section class="collapsible-section">
+            <h2 class="collapsible-title" onclick="toggleContent(this)">
+                Noda inaki <span class="arrow">▼</span>
+            </h2>
+            <div class="collapsible-content">
+                <p>
+                    Na inaki levu ni YWJ sai koya me vakavulici ira na marama kei na goneyalewa ena nodra kila na nodra yavu dodonu 
+                    kei na nodra vakacegu ena nodra bula vakaitikotiko. E sa vakarautaki e levu na itukutuku kei na veivakarautaki 
+                    me ra marautaka kina na nodra bula ena itikotiko kei na gauna dredre.
+                </p>
+            </div>
         </section>
+        <hr class="divider">
 
-        <section id="get-involved">
-            <h2>Vukea Keitou</h2>
-            <ul>
-                <li><b>Wasea na iTukutuku:</b> Vakayagataka na nomu gauna me wasea na itukutuku ki na nomu vuvale kei na itikotiko.</li>
-                <li><b>Tokona na YWJ:</b> Me tokona na YWJ ena nodra veivuke vakailavo kei na nodra veitokoni ena ituvaki e gadrevi.</li>
-                <li><b>Veivuke ni Drodro:</b> Vakaitavi ena veivakarautaki kei na veivuke ena kena vakavakarau na veika vou ena 
-                veisoqosoqo ni YWJ.</li>
-                <li><b>Veivuke ena Levu:</b> Me da na veiqaravi ena veivakabibitaki na veika ka caka ena noda vanua kei na vuravura raraba.</li>
-            </ul>
+        <!-- How You Can Help Section -->
+        <section class="collapsible-section">
+            <h2 class="collapsible-title" onclick="toggleContent(this)">
+                Vukea Keitou <span class="arrow">▼</span>
+            </h2>
+            <div class="collapsible-content">
+                <ul>
+                    <li><b>Wasea na iTukutuku:</b> Vakayagataka na nomu gauna me wasea na itukutuku ki na nomu vuvale kei na itikotiko.</li>
+                    <li><b>Tokona na YWJ:</b> Me tokona na YWJ ena nodra veivuke vakailavo kei na nodra veitokoni ena ituvaki e gadrevi.</li>
+                    <li><b>Veivuke ni Drodro:</b> Vakaitavi ena veivakarautaki kei na veivuke ena kena vakavakarau na veika vou ena 
+                    veisoqosoqo ni YWJ.</li>
+                </ul>
+            </div>
         </section>
     </main>
 
