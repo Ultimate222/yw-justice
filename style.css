@@ -14,9 +14,9 @@ body {
     margin-right: 15px;
 }
 
-//* General Header Styles */
+/* General Header Styles */
 header {
-    position: fixed;
+    position: fixed; /* Keeps the header at the top while scrolling */
     top: 0;
     width: 100%;
     text-align: center;
@@ -25,26 +25,26 @@ header {
     background-position: center;
     color: white;
     transition: all 0.5s ease; /* Smooth shrinking transition */
-    z-index: 1000;
+    z-index: 1000; /* Ensures it stays above other content */
 }
 
 /* Default Header Size */
 header.large {
-    height: 150px; /* Reduced height for a more balanced size */
-    font-size: 2rem; /* Adjusted font size for the title */
-    padding: 20px 10px; /* Reduced padding for a more compact layout */
+    height: 150px; /* Set initial height for the header */
+    font-size: 2rem; /* Adjust font size for title */
+    padding: 10px; /* Add small padding for better spacing */
     opacity: 1; /* Fully visible */
+    box-sizing: border-box; /* Ensures padding doesn’t affect height */
 }
 
 /* Shrunk Header */
 header.shrunk {
-    height: 0; /* Shrinks header to zero height */
+    height: 0; /* Shrinks the header to zero height */
     font-size: 0; /* Hides the text */
     padding: 0; /* Removes padding */
-    opacity: 0; /* Makes the header invisible */
+    opacity: 0; /* Makes it invisible */
     pointer-events: none; /* Prevents interaction when hidden */
 }
-
 
 h1 {
     font-size: 24px;
