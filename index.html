@@ -147,27 +147,7 @@
     </style>
 </head>
 <body>
-    <!-- Collapsible Section for 'You Can Help' -->
-    <section class="collapsible-section">
-        <h2 class="collapsible-title" onclick="toggleContent(this)">
-            <span data-key="you-can-help-(get-involved)-title">You Can Help (Get Involved)</span>
-            <span class="arrow">▼</span>
-        </h2>
-        <div class="collapsible-content">
-            <p data-key="you-can-help-(get-involved)-content">
-                <b>Spread Awareness:</b> Share our resources with friends, family, and colleagues to help more women understand their rights.
-            </p>
-            <p data-key="you-can-help-(get-involved)-content">
-                <b>Volunteer:</b> Connect with us to see how you can support our campaigns, assist with content creation, or help run local events.
-            </p>
-            <p data-key="you-can-help-(get-involved)-content">
-                <b>Donate or Fundraise:</b> Although YWJ is a student-led initiative, we are open to ideas on how to raise funds or donations that will support our efforts in Fiji.
-            </p>
-            <p data-key="you-can-help-(get-involved)-content">
-                <b>Stay Informed:</b> Regularly check our website and follow us on social media to stay updated on women’s rights issues in Fiji and learn about upcoming events or new resources.
-            </p>
-        </div>
-    </section>
+    
 
     <!-- Collapsible Section for 'Core Values' -->
     <section class="collapsible-section">
@@ -192,20 +172,7 @@
                 <b>Community Support:</b> Together, we are stronger. We aim to build a supportive community of advocates, allies, and those affected by these issues to help each other and drive positive change.
             </p>
         </div>
-    </section>
 
-    <script>
-        // JavaScript function to toggle content visibility and change arrow direction
-        function toggleContent(element) {
-            const content = element.nextElementSibling;
-            const arrow = element.querySelector('.arrow');
-
-            // Toggle the visibility of the collapsible content
-            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
-
-            // Change the arrow direction
-            arrow.innerHTML = (arrow.innerHTML === '▼') ? '▲' : '▼';
-        }
     </script>
 </body>
 </html>
