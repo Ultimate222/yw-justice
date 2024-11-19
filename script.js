@@ -89,7 +89,7 @@ const translations = {
         "why-fiji-content": "Na YWJ e na vakasama ni..."
     },
     hi: {
-        "header-title": "महिलाओं के न्याय के लिए युवाओं",
+        "header-title": "युवा महिलाओं के लिए न्याय", 
         "header-subtitle": "स्वर को सशक्त बनाना, अधिकारों की रक्षा करना",
         "nav-home": "मुख्य पृष्ठ",
         "nav-about": "हमारे बारे में",
