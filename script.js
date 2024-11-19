@@ -1,6 +1,6 @@
 // Language switching logic
 function changeLanguage(language) {
-    // First, define the translations object
+    // Define the translations object
     const translations = {
         en: {
             'header-title': 'Youth For Women\'s Justice (YWJ)',
@@ -16,7 +16,7 @@ function changeLanguage(language) {
             'why-fiji-title': 'Why Focus on Fiji?',
             'why-fiji-content': 'YWJ recognizes the importance of focusing on these specific cultural contexts and aims to provide resources tailored to the Fijian community’s unique needs, challenges, and language.',
             'core-values-title': 'Core Values',
-            'core-values-content': 'Empowerment:We believe that every woman and girl deserves to know her worth and rights. Through YWJ, we aim to empower women by educating them about their rights and the options available to them. Awareness: Education and awareness are crucial for social change. We are committed to providing accessible information that helps individuals and communities recognize the issues affecting Fijian women and understand their role in creating a safer environment for all. Advocacy: Standing up for women’s rights requires collective action. YWJ is dedicated to advocating for policy changes, societal shifts, and support systems that protect and uplift women. Inclusivity: YWJ is for all women and girls, regardless of age, background, or location. We believe in an inclusive approach that ensures all voices are heard and supported. Community Support: Together, we are stronger. We aim to build a supportive community of advocates, allies, and those affected by these issues to help each other and drive positive change.',
+            'core-values-content': 'YWJ believes in empowerment, awareness, advocacy, inclusivity, and community support.',
             'purpose-title': 'Purpose',
             'purpose-content': 'The purpose of this site is to educate and support women and girls in Fiji regarding their rights and provide resources to combat gender-based violence.',
             'you-can-help-(get-involved)-title': 'You Can Help (Get Involved)',
@@ -36,7 +36,7 @@ function changeLanguage(language) {
             'why-fiji-title': 'Na cava me vakayagataki na Fiji?',
             'why-fiji-content': 'Na YWJ e nanuma tiko na ibalebale ni veivakatorocaketaki, mai na veiveisau ni kena, e na mataka ni ni.',
             'core-values-title': 'Na Veika Bibi',
-            'core-values-content': 'Na YWJ e maroroya na veivakasalataki, kei na iRairai', 
+            'core-values-content': 'Na YWJ e maroroya na veivakasalataki, kei na iRairai',
             'purpose-title': 'iVakamacala',
             'purpose-content': 'The purpose of this site is to educate and support women and girls in Fiji regarding their rights and provide resources to combat gender-based violence.',
             'you-can-help-(get-involved)-title': 'Ko Ni Cakava',
@@ -64,35 +64,17 @@ function changeLanguage(language) {
         }
     };
 
-    // Select the translations for the selected language
+    // Get the selected language's translations
     const selectedLanguage = translations[language];
 
-    // Clear content before setting new values
+    // Select all elements that need to be translated
     const elements = document.querySelectorAll('[data-key]');
+
+    // Reset all elements and update with the new translations
     elements.forEach(element => {
         const key = element.getAttribute('data-key');
-        // Ensure that we don't append or duplicate, just replace
         if (selectedLanguage[key]) {
             element.innerText = selectedLanguage[key];
-        } else {
-            element.innerText = ''; // Clear content if no translation exists
         }
     });
-}
-
-// Collapsible content toggle
-function toggleContent(element) {
-    const content = element.nextElementSibling;
-    const section = element.closest('.collapsible-section');
-    
-    // Toggle the 'open' class on the section
-    section.classList.toggle('open');
-    
-    // Check if the content is already open, and adjust the arrow direction
-    const arrow = element.querySelector('.arrow');
-    if (section.classList.contains('open')) {
-        arrow.textContent = '▲'; // Arrow pointing up when open
-    } else {
-        arrow.textContent = '▼'; // Arrow pointing down when closed
-    }
 }
