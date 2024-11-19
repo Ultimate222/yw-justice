@@ -35,7 +35,7 @@ body {
 }
 /* General Header Styles */
 header {
-    position: sticky;
+    position: absolute;;
     top: 0;
     z-index: 1000;
     text-align: center;
@@ -46,14 +46,17 @@ header {
 
 /* Default Header Size */
 header.large {
-    padding: 50px 10px; /* Larger padding for a bigger header */
-    font-size: 2.5rem; /* Larger font size for the main title */
+    padding:1000px 20px; /* Larger padding for a bigger header */
+    font-size: 3rem;
+ opacity: 1/* Larger font size for the main title */
 }
 
 /* Shrunk Header Size */
 header.shrunk {
-    padding: 20px 10px; /* Smaller padding when scrolled */
-    font-size: 1.8rem; /* Smaller font size for the main title */
+    padding: 0px; /* Smaller padding when scrolled */
+    font-size: 0;
+  opacity: 0; 
+    pointer-events: none; /* Smaller font size for the main title */
 }
 
 #main-header h1, #main-header p {
