@@ -11,7 +11,6 @@ function changeLanguage(language) {
         // Update text to Hindi
     }
 }
-
 // Scroll animation function
 function revealOnScroll() {
     const sections = document.querySelectorAll('.section');
