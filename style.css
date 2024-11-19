@@ -129,6 +129,42 @@ nav a:hover {
     transform: rotate(180deg);
 }
 
+/* Collapsible Section */
+.collapsible-section {
+    margin-bottom: 10px;
+}
+
+.collapsible-title {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.collapsible-content {
+    display: none;
+    padding: 10px;
+    margin-top: 5px;
+    border-left: 3px solid #4CAF50;
+    background-color: #f9f9f9;
+    max-height: 200px; /* Limit the height when collapsed */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+    transition: max-height 0.3s ease-out; /* Smooth transition for height change */
+}
+
+.collapsible-section.open .collapsible-content {
+    display: block;
+    max-height: 5000px; /* No limit on height when expanded */
+}
+
+.arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section.open .arrow {
+    transform: rotate(180deg); /* Rotate the arrow when the section is open */
+}
+
+
 /* Main Section Styles */
 main {
     padding: 20px;
