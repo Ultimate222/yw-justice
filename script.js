@@ -35,6 +35,29 @@ function toggleContent(element) {
     const section = element.parentElement; // Get the parent section element
     section.classList.toggle("open"); // Toggle the "open" class
 }
+// Add this JavaScript to script.js
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) { // Adjust scroll distance to trigger the shrink
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
+
+document.querySelectorAll('.collapsible').forEach(item => {
+    item.querySelector('.arrow').addEventListener('click', () => {
+        const content = item.querySelector('.collapsible-content');
+        content.classList.toggle('open');
+        
+        // Adjust height only if the content is open
+        if (content.classList.contains('open')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = "0";
+        }
+    });
+});
 
 function changeLanguage(language) {
     const elements = document.querySelectorAll("[data-key]");
@@ -44,7 +67,7 @@ function changeLanguage(language) {
             element.textContent = translations[language][key];
         }
     });
-    }
+}
 
 function toggleContent(element) {
     const content = element.nextElementSibling;
@@ -122,4 +145,3 @@ fj:
     "you-can-help-(get-involved)-content": "YWJ मानता है कि हर व्यक्ति महिलाओं के अधिकारों को समर्थन देने में भूमिका निभा सकता है। जागरूकता फैलाएं, स्वयंसेवा करें, दान करें और संसाधन साझा करें।"
     },
 };
-
