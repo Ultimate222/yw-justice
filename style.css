@@ -14,55 +14,37 @@ body {
     margin-right: 15px;
 }
 
-/* General Header Styles */
-/* General Header Styles */
+//* General Header Styles */
 header {
-    position: fixed; /* Keep the header at the top while scrolling */
+    position: fixed;
     top: 0;
     width: 100%;
     text-align: center;
-    background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with your background image URL */
+    background-image: url('your-image.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     color: white;
-    transition: all 0.5s ease; /* Smooth transition for shrinking and disappearing */
-    z-index: 1000; /* Ensure it stays above other elements */
+    transition: all 0.5s ease; /* Smooth shrinking transition */
+    z-index: 1000;
 }
 
 /* Default Header Size */
 header.large {
-    height: 300px; /* Set initial height for the large header */
-    font-size: 2.5rem; /* Larger font size */
-    padding: 40px 10px; /* Add some padding */
+    height: 150px; /* Reduced height for a more balanced size */
+    font-size: 2rem; /* Adjusted font size for the title */
+    padding: 20px 10px; /* Reduced padding for a more compact layout */
     opacity: 1; /* Fully visible */
 }
 
 /* Shrunk Header */
 header.shrunk {
-    height: 0; /* Shrink the header to zero height */
-    font-size: 0; /* Reduce text size to zero */
-    padding: 0; /* Remove padding */
-    opacity: 0; /* Make it invisible */
-    pointer-events: none; /* Prevent interaction when invisible */
+    height: 0; /* Shrinks header to zero height */
+    font-size: 0; /* Hides the text */
+    padding: 0; /* Removes padding */
+    opacity: 0; /* Makes the header invisible */
+    pointer-events: none; /* Prevents interaction when hidden */
 }
 
-
-#main-header h1, #main-header p {
-    margin: 0;
-    padding: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for text */
-}
-
-/* Optional: Fade and shrink text when scrolling */
-#main-header.shrink h1 {
-    transform: scale(0.8);
-    opacity: 0.8;
-}
-
-#main-header.shrink p {
-    transform: scale(0.8);
-    opacity: 0.7;
-}
 
 h1 {
     font-size: 24px;
