@@ -79,3 +79,20 @@ function toggleContent(element) {
     const section = element.closest('.collapsible-section');
     section.classList.toggle('open');
 }
+
+function toggleContent(element) {
+    const content = element.nextElementSibling;
+    const section = element.closest('.collapsible-section');
+    
+    // Toggle the 'open' class on the section
+    section.classList.toggle('open');
+    
+    // Check if the content is already open, and adjust the arrow direction
+    const arrow = element.querySelector('.arrow');
+    if (section.classList.contains('open')) {
+        arrow.textContent = '▲'; // Arrow pointing up when open
+    } else {
+        arrow.textContent = '▼'; // Arrow pointing down when closed
+    }
+}
+
