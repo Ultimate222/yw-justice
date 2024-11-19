@@ -1,17 +1,16 @@
-// Shrinking Header on Scroll
+// Header Shrinking and Disappearing on Scroll
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
 
-    if (window.scrollY > 50) {
-        // Add the 'shrunk' class if scrolled down
+    if (window.scrollY > 150) { // Adjust the scroll threshold as needed
         header.classList.add("shrunk");
         header.classList.remove("large");
     } else {
-        // Restore the larger header when scrolled to the top
         header.classList.add("large");
         header.classList.remove("shrunk");
     }
 });
+
 
 // Function to apply Google Translate dynamically
 function translatePage(languageCode) {
