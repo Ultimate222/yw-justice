@@ -169,7 +169,6 @@ main {
 
 .collapsible-section.open .arrow {
     transform: rotate(180deg); /* Rotate arrow when section is open */
-
 }
 
 .collapsible-content {
@@ -183,6 +182,7 @@ main {
 .collapsible-content.open {
     max-height: 200px; /* Use the same value here as in the regular max-height */
 }
+
 
 /* Center the poster section */
 .posters {
