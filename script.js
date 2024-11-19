@@ -44,18 +44,6 @@ function changeLanguage(language) {
             element.textContent = translations[language][key];
         }
     });
-}
-
-function toggleContent(element) {
-    const content = element.nextElementSibling;
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        content.style.opacity = 0;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.opacity = 1;
-    }
-}
 
 const translations = {
 en: {
