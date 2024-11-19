@@ -1,18 +1,16 @@
-/* Basic styles */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
 /* Basic Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #333;
     background-color: #f8f8f8;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+/* Header Styles */
 header {
-    background-image: url('header-image.jpg'); /* Replace with your header image */
+    background-image: url('header-image.jpg'); /* Replace with your actual header image */
     background-size: cover;
     background-position: center;
     color: white;
@@ -26,25 +24,26 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
     margin: 0;
+    font-size: 2.5em;
 }
 
 header p {
-    margin: 10px 0 0;
     font-size: 1.2em;
+    margin: 10px 0 0;
 }
 
 header.shrink {
     height: 200px;
 }
 
-header.shrink h1,
-header.shrink p {
+header.shrink h1, header.shrink p {
     transform: scale(0.9);
     opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
@@ -66,6 +65,7 @@ nav a:hover {
     background-color: #3700b3;
 }
 
+/* Language Selector */
 #language-selector {
     display: flex;
     justify-content: center;
@@ -88,13 +88,11 @@ nav a:hover {
     background-color: #6200ea;
 }
 
-main {
-    padding: 20px;
-}
-
+/* Collapsible Sections */
 .collapsible-section {
     margin-bottom: 20px;
     border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .collapsible-title {
@@ -104,7 +102,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
 }
 
 .arrow {
@@ -116,10 +113,11 @@ main {
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
+    padding: 0 10px;
 }
 
 .collapsible-section.open .collapsible-content {
-    max-height: 1000px; /* Set this high enough to accommodate content */
+    max-height: 1000px; /* High enough to handle larger content */
     opacity: 1;
 }
 
@@ -127,6 +125,7 @@ main {
     transform: rotate(180deg);
 }
 
+/* Posters Section */
 .posters {
     display: flex;
     flex-wrap: wrap;
@@ -138,22 +137,28 @@ main {
     background-color: #e0e0e0;
     border-radius: 8px;
     padding: 20px;
-    width: 150px;
+    width: 200px; /* Adjust size for better visuals */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.poster:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Footer */
 footer {
     background-color: #6200ea;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
 }
 
 footer .social-media {
-    cursor: pointer;
     margin: 0 10px;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
