@@ -1,6 +1,6 @@
 // Language switching logic
 function changeLanguage(language) {
-    const elements = document.querySelectorAll('[data-key]');
+    const elements = document.querySelectorAll('[data-key]');  // Select all elements with 'data-key'
     const translations = {
         en: {
             'header-title': 'Youth For Women\'s Justice (YWJ)',
@@ -64,22 +64,19 @@ function changeLanguage(language) {
         }
     };
 
+    // Select the translations for the selected language
     const selectedLanguage = translations[language];
 
+    // Loop through each element and update its content
     elements.forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (selectedLanguage[key]) {
-            element.innerText = selectedLanguage[key];
+        const key = element.getAttribute('data-key');  // Get the 'data-key' attribute
+        if (selectedLanguage[key]) {  // If the translation exists for the key
+            element.innerText = selectedLanguage[key];  // Set the text of the element
         }
     });
 }
 
 // Collapsible content toggle
-function toggleContent(element) {
-    const section = element.closest('.collapsible-section');
-    section.classList.toggle('open');
-}
-
 function toggleContent(element) {
     const content = element.nextElementSibling;
     const section = element.closest('.collapsible-section');
@@ -95,4 +92,3 @@ function toggleContent(element) {
         arrow.textContent = '▼'; // Arrow pointing down when closed
     }
 }
-
