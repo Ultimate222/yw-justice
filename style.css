@@ -140,6 +140,13 @@ main {
     padding: 10px 0;
 }
 
+}
+
+.collapsible-title:hover {
+    background-color: #b87fb9;
+}
+
+
 .collapsible-title {
     font-size: 1.5em;
     color: #800080; /* Set your chosen color */
