@@ -33,6 +33,28 @@ body {
     height: 200px; /* Shrink height on scroll */
     padding: 20px;
 }
+/* General Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    background-color: #6a1b9a;
+    color: white;
+    transition: all 0.3s ease; /* Smooth shrinking transition */
+}
+
+/* Default Header Size */
+header.large {
+    padding: 50px 10px; /* Larger padding for a bigger header */
+    font-size: 2.5rem; /* Larger font size for the main title */
+}
+
+/* Shrunk Header Size */
+header.shrunk {
+    padding: 20px 10px; /* Smaller padding when scrolled */
+    font-size: 1.8rem; /* Smaller font size for the main title */
+}
 
 #main-header h1, #main-header p {
     margin: 0;
