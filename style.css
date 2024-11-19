@@ -1,152 +1,299 @@
-/* General Styles */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Basic styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+    font-family: 'Playfair Display', serif;
     color: #333;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+    margin: 0;
 }
 
 /* Header */
-header {
+#main-header {
+    background-image: url('images:/logo.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
-    background-color: #6a1b9a;
-    color: white;
-    padding: 20px 10px;
+    height: 400px; /* Starting height */
+    padding: 50px;
+    transition: height 0.3s ease; /* Smooth shrinking */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-header h1 {
+#main-header.shrink {
+    height: 200px; /* Shrink height on scroll */
+    padding: 20px;
+}
+
+#main-header h1, #main-header p {
     margin: 0;
-    font-size: 2.5em;
+    padding: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for text */
 }
 
-header p {
-    font-size: 1.2em;
+#main-header.shrink h1 {
+    transform: scale(0.8);
+    opacity: 0.8;
 }
 
-#language-selector button {
-    background-color: #d4a5d1;
-    border: none;
-    padding: 10px 15px;
-    margin: 10px 5px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-#language-selector button:hover {
-    background-color: #b87fb9;
+#main-header.shrink p {
+    transform: scale(0.8);
+    opacity: 0.7;
 }
 
 /* Navigation */
 nav {
-    background-color: #4a148c;
-    text-align: center;
-    padding: 10px 0;
+    background-color: #9C27B0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
     margin: 0 15px;
-    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d4a5d1;
+    background-color: #6A1B9A;
+    border-radius: 4px;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+/* Language Selector */
+#language-selector {
+    text-align: center;
+    margin: 20px;
 }
 
-h2 {
-    color: #6a1b9a;
-    margin-bottom: 10px;
+#language-selector button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #d1c4e9; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-/* Collapsible Sections */
+#language-selector button:hover {
+    background-color: #8e24aa; /* Lighter Purple */
+}
+
+/* Collapsible Section Styles */
 .collapsible-section {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
 .collapsible-title {
-    background-color: #d4a5d1;
-    color: white;
-    padding: 10px 15px;
+    font-size: 1.5em;
+    color: #800080;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.collapsible-title:hover {
-    background-color: #b87fb9;
 }
 
 .arrow {
-    transition: transform 0.3s ease;
+    font-size: 1em;
+    transition: transform 0.5s; /* Rotate arrow smoothly */
 }
 
 .collapsible-content {
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
     opacity: 0;
-    padding: 0 15px;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
 }
 
 .collapsible-section.open .collapsible-content {
-    max-height: 1000px; /* Sufficient height to fit content */
+    max-height: 200px;
     opacity: 1;
-    padding: 15px;
+    padding-top: 10px;
 }
 
 .collapsible-section.open .arrow {
     transform: rotate(180deg);
 }
 
-/* Gallery Section */
-#gallery {
-    margin-top: 20px;
+/* Collapsible Section */
+.collapsible-section {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+.collapsible-title {
+    font-size: 1.5em;
+    color: #800080; /* Set your chosen color */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 1em;
+    transition: transform 0.5s; /* Rotate arrow smoothly */
+}
+
+/* Collapsible content styling */
+.collapsible-content {
+    max-height: 0; /* Start with hidden content */
+    overflow-y: hidden; /* Hide the overflow initially */
+    transition: max-height 1.0s ease, opacity 0.6s ease; /* Smoothly reveal content */
+    opacity: 0;
+    padding-top: 10px; /* Optional: adds spacing when open */
+}
+
+/* When the section is open */
+.collapsible-section.open .collapsible-content {
+    max-height: 1000px; /* Adjust max-height as needed */
+    opacity: 1; /* Make it visible */
+    padding-top: 10px; /* Optional: add padding when open */
+    overflow-y: auto; /* Enable scrolling when content is too large */
+}
+
+.collapsible-section.open .arrow {
+    transform: rotate(180deg); /* Rotate arrow when section is open */
+}
+
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2, h3, h1, h4 {
+    color: #6A1B9A;
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #E1BEE7;
+    margin: 20px 0;
+}
+
+/* Posters Section */
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.poster {
+    background-color: #E1BEE7;
+    color: #6A1B9A;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Section */
+.section.posters {
+    margin: 40px auto;
+    width: 90%; /* Makes the gallery section responsive */
+    text-align: center;
+}
+
+.posters h2 {
+    font-size: 2em;
+    color: #6A1B9A;
+    margin-bottom: 20px;
+}
+
+/* Flexbox layout for the posters */
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for each individual poster */
+.poster {
+    width: calc(25% - 20px); /* 4 posters in a row with space between them */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .poster img {
     width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    border-radius: 8px;
+    max-height: 250px; /* Limit the height of the images to maintain proportion */
 }
 
 .poster p {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #555;
+    margin-top: 15px;
+    font-size: 1em;
+    color: #6A1B9A;
 }
 
-/* Footer */
+/* Ensure text is centered and readable */
+@media (max-width: 768px) {
+    .poster {
+        width: calc(50% - 20px); /* 2 posters in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .poster {
+        width: 100%; /* 1 poster per row on very small screens */
+    }
+}
+
+
+/* Footer Styles */
 footer {
-    background-color: #4a148c;
-    color: white;
     text-align: center;
-    padding: 15px 10px;
-    margin-top: 20px;
+    padding: 20px;
+    background-color: #6A1B9A;
+    color: white;
+    margin-top: 30px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
+.social-media {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social-media:hover {
+    color: #E1BEE7;
+}
+
+/* Animation when scrolling */
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
