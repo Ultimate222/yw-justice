@@ -16,22 +16,15 @@ body {
 
 /* Header Styling */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background-image: url('MB:/Untitled design.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    z-index: 1000;
-    transition: height 0.5s ease, padding 0.5s ease; /* Smooth shrinking */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Prevent content from spilling out */
-}
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url('MB:/Untitled design.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  transition: height 0.3s ease, font-size 0.3s ease;
 
 /* Large Header State (Full Size) */
 header.large {
