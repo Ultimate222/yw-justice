@@ -61,35 +61,51 @@ main {
 }
 
 /* Navigation Bar */
-nav {
-    margin-top: 0; /* Ensure no overlap with header */
-    background-color: #4a148c;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 999; /* Above main content but below header */
+.navigation-bar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-    font-size: 24px;
+.navigation-bar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
 }
 
-nav {
-    background-color: #9C27B0;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 8px;
+.navigation-bar ul li {
+  display: inline;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s ease;
+.navigation-bar ul li a {
+  text-decoration: none;
+  color: #333;
 }
 
+.language-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Main Content Section */
+main {
+  margin-top: 20px;
+}
+
+section {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 nav a:hover {
  text-decoration: underline; 
     background-color: #6A1B9A;
