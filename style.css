@@ -73,50 +73,62 @@ main {
   justify-content: space-between; /* Space between the items */
   align-items: center; /* Center items vertically */
 }
+/* Navigation Bar */
+.navigation-bar {
+    position: sticky; /* Sticks to the top of the viewport */
+    top: 0;
+    background-color: #ffffff; /* White background */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between nav links and language buttons */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding for spacing */
+    z-index: 10; /* Keeps it above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for visual separation */
+}
 
 /* Navigation Links */
 .navigation-bar ul {
-  list-style: none; /* Remove bullets from list items */
-  display: flex; /* Display items in a row */
-  gap: 20px; /* Space between items */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Display links in a row */
+    gap: 20px; /* Add spacing between links */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
 }
 
 .navigation-bar ul li {
-  display: inline; /* Inline items */
+    display: inline-block; /* Align items inline */
 }
 
 .navigation-bar ul li a {
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Text color (dark gray) */
-  font-weight: bold; /* Make links bold */
-  transition: color 0.2s ease; /* Smooth hover effect */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color (dark gray) */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.2s ease; /* Smooth hover effect */
 }
 
 .navigation-bar ul li a:hover {
-  color: #6200ea; /* Purple on hover */
+    color: #6200ea; /* Optional hover color */
 }
 
 /* Language Buttons */
 .language-buttons {
-  display: flex; /* Align buttons in a row */
-  gap: 10px; /* Space between buttons */
+    display: flex; /* Align buttons in a row */
+    gap: 15px; /* Add spacing between buttons */
 }
 
 .language-buttons button {
-  padding: 8px 12px; /* Button padding */
-  background-color: #6200ea; /* Purple background */
-  color: white; /* White text */
-  border: none; /* Remove border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  font-weight: bold; /* Bold text */
-  transition: background-color 0.2s ease; /* Smooth hover effect */
+    background-color: #6200ea; /* Purple button background */
+    color: white; /* White text */
+    padding: 8px 12px; /* Padding for size */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
 }
 
 .language-buttons button:hover {
-  background-color: #4500b0; /* Darker purple on hover */
+    background-color: #4500b0; /* Darker purple on hover */
 }
 
 /* Main Content Section */
@@ -203,20 +215,23 @@ main {
     padding: 10px 0;
 }
 
-}
-
-.collapsible-title:hover {
-    background-color: #b87fb9;
-}
-
-
+/* Collapsible Section Titles */
 .collapsible-title {
-    font-size: 1.5em;
-    color: #800080; /* Set your chosen color */
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    cursor: pointer; /* Pointer cursor for interactive headers */
+    background-color: #ffffff; /* Set default background */
+    color: #333; /* Default text color */
+    border: 1px solid #ddd; /* Optional border for structure */
+    padding: 10px 15px; /* Padding for spacing */
+    margin-bottom: 5px; /* Space between collapsible headers */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Make the text bold */
+    transition: none; /* Remove hover effect */
+}
+
+/* Remove Hover Background Color */
+.collapsible-title:hover {
+    background-color: #ffffff; /* Same as default background */
+    color: #333; /* Same as default text color */
 }
 
 .arrow {
