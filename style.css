@@ -14,36 +14,67 @@ body {
     margin-right: 15px;
 }
 
-/* General Header Styles */
+/* Header Styling */
 header {
-    position: fixed; /* Keeps the header at the top while scrolling */
+    position: fixed;
     top: 0;
     width: 100%;
     text-align: center;
-    background-image: url('your-image.jpg'); /* Replace with your background image */
+    background-image: url('your-image.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     color: white;
-    transition: all 0.5s ease; /* Smooth shrinking transition */
-    z-index: 1000; /* Ensures it stays above other content */
+    z-index: 1000;
+    transition: height 0.5s ease, padding 0.5s ease; /* Smooth shrinking */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent content from spilling out */
 }
 
-/* Default Header Size */
+/* Large Header State (Full Size) */
 header.large {
-    height: 150px; /* Set initial height for the header */
-    font-size: 2rem; /* Adjust font size for title */
-    padding: 10px; /* Add small padding for better spacing */
-    opacity: 1; /* Fully visible */
-    box-sizing: border-box; /* Ensures padding doesn’t affect height */
+    height: 200px; /* Adjust height for large state */
+    padding: 20px 0; /* Padding for spacing */
+    font-size: 1.8rem; /* Text size */
 }
 
-/* Shrunk Header */
+/* Shrunk Header State */
 header.shrunk {
-    height: 0; /* Shrinks the header to zero height */
-    font-size: 0; /* Hides the text */
-    padding: 0; /* Removes padding */
-    opacity: 0; /* Makes it invisible */
-    pointer-events: none; /* Prevents interaction when hidden */
+    height: 70px; /* Smaller height when scrolling */
+    padding: 10px 0;
+    font-size: 1rem; /* Smaller text size */
+}
+
+/* Header Text Styling */
+header h1 {
+    margin: 0;
+    font-size: 2rem; /* Adjust main heading size */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header p {
+    margin: 5px 0 0; /* Proper spacing below the main heading */
+    font-size: 1rem; /* Subheading font size */
+    opacity: 0.9; /* Subtle effect */
+}
+
+/* Main Content Adjustments (Below the Header) */
+main {
+    margin-top: 220px; /* Matches the large header height */
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    margin-top: 0; /* Ensure no overlap with header */
+    background-color: #4a148c;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 999; /* Above main content but below header */
 }
 
 h1 {
