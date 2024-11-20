@@ -1,8 +1,8 @@
-// Header Shrinking and Disappearing on Scroll
+// Shrinking and Disappearing Header on Scroll
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
 
-    if (window.scrollY > 150) { // Adjust the scroll threshold as needed
+    if (window.scrollY > 100) { // Adjust threshold for shrinking
         header.classList.add("shrunk");
         header.classList.remove("large");
     } else {
