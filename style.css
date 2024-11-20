@@ -60,37 +60,63 @@ main {
     padding: 20px;
 }
 
+
 /* Navigation Bar */
 .navigation-bar {
-  position: sticky;
+  position: sticky; /* Sticks to the top on scroll */
   top: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 10px 20px; /* Padding around the content */
+  z-index: 10; /* Keeps it above other elements */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between the items */
+  align-items: center; /* Center items vertically */
 }
 
+/* Navigation Links */
 .navigation-bar ul {
-  list-style-type: none;
-  display: flex;
-  gap: 15px;
+  list-style: none; /* Remove bullets from list items */
+  display: flex; /* Display items in a row */
+  gap: 20px; /* Space between items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .navigation-bar ul li {
-  display: inline;
+  display: inline; /* Inline items */
 }
 
 .navigation-bar ul li a {
-  text-decoration: none;
-  color: #333;
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color (dark gray) */
+  font-weight: bold; /* Make links bold */
+  transition: color 0.2s ease; /* Smooth hover effect */
 }
 
+.navigation-bar ul li a:hover {
+  color: #6200ea; /* Purple on hover */
+}
+
+/* Language Buttons */
 .language-buttons {
-  display: flex;
-  gap: 10px;
+  display: flex; /* Align buttons in a row */
+  gap: 10px; /* Space between buttons */
+}
+
+.language-buttons button {
+  padding: 8px 12px; /* Button padding */
+  background-color: #6200ea; /* Purple background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.language-buttons button:hover {
+  background-color: #4500b0; /* Darker purple on hover */
 }
 
 /* Main Content Section */
