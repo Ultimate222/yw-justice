@@ -14,17 +14,29 @@ window.addEventListener("scroll", () => {
 // Collapsible Section Functionality
 function toggleContent(element) {
     const section = element.parentElement;
+    const content = section.querySelector(".collapsible-content");
+    const arrow = section.querySelector(".arrow");
+
+    // Toggle the 'open' class on the section
     section.classList.toggle("open");
 
-    const content = section.querySelector(".collapsible-content");
+    // If the section is open, expand the content
     if (section.classList.contains("open")) {
-        content.style.maxHeight = content.scrollHeight + "px";
-        content.style.opacity = 1;
+        content.style.maxHeight = content.scrollHeight + "px"; // Expand to full height
+        content.style.opacity = 1; // Fade in content
+        arrow.style.transform = "rotate(180deg)"; // Rotate arrow
     } else {
+        // If the section is closed, collapse the content
         content.style.maxHeight = "0";
         content.style.opacity = 0;
+        arrow.style.transform = "rotate(0deg)";
     }
 }
+
+// Add event listeners to all collapsible titles
+document.querySelectorAll(".collapsible-title").forEach((title) => {
+    title.addEventListener("click", () => toggleContent(title));
+});
 
 // Language Translation Functionality
 const translations = {
@@ -83,4 +95,28 @@ const translations = {
             <b>सशक्तिकरण:</b> महिलाओं को उनके अधिकारों के बारे में शिक्षित करना।<br>
             <b>जागरूकता:</b> बदलाव लाने के लिए शिक्षा आवश्यक है।<br>
             <b>वकालत:</b> महिलाओं के समर्थन के लिए प्रणालीगत बदलाव।
-       
+        `,
+        purpose: `
+            YWJ का उद्देश्य महिलाओं और लड़कियों को उनके अधिकारों के बारे में जागरूक करना और लैंगिक हिंसा से लड़ने के लिए संसाधन प्रदान करना है।
+        `,
+        youCanHelp: `
+            <b>जागरूकता फैलाएं:</b> हमारे संसाधनों को साझा करें।<br>
+            <b>स्वयंसेवा:</b> स्थानीय आयोजनों में शामिल हों।<br>
+            <b>दान करें:</b> फंडिंग और आपूर्ति प्रदान करें।
+        `
+    }
+};
+
+// Function to translate content dynamically
+function translatePage(language) {
+    document.querySelector("#about-ywj p").innerHTML = translations[language].about;
+    document.querySelector("#why-fiji p").innerHTML = translations[language].whyFiji;
+    document.querySelector("#core-values ul").innerHTML = translations[language].coreValues;
+    document.querySelector("#purpose p").innerHTML = translations[language].purpose;
+    document.querySelector("#get-involved ul").innerHTML = translations[language].youCanHelp;
+}
+
+// Event Listeners for Language Buttons
+document.getElementById("english").addEventListener("click", () => translatePage("en"));
+document.getElementById("fijian").addEventListener("click", () => translatePage("fj"));
+document.getElementById("hindi").addEventListener("click", () => translatePage("hi"));
